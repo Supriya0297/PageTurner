@@ -1,0 +1,43 @@
+.Header header{
+  background-image: url('https://m.media-amazon.com/images/G/01/kfw/landing/img_sky_bg._CB630820936_.png');
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.Header header img{
+  height: 39px;
+  width: 209px;
+  margin: 40px 5px 20px 5px;
+}
+.Header header h2 {
+  color: white;
+}
+#Header__signUp {
+  background-color: #ddd;
+  height: fit-content;
+}
+
+#Header__signIn {
+  background-color: rgb(246, 220, 164);
+  display: flex;
+  height: fit-content;
+}
+#Header__signIn img {
+  height: 32px;
+  width: 32px;
+}
+
+
+#kindle_on_web {
+  height: 262.104px;
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 0px;
+  align-items: end;
+}
+
+
+.buttons-container {
+  display: flex;
+}

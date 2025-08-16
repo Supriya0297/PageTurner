@@ -1,0 +1,37 @@
+.SignInPage label {
+font-weight: bold;
+font-family: Arial, sans-serif;
+
+}
+.SignInPage input{
+  margin-bottom: 20px;
+  height: 26px;
+}
+.SignInPage input:focus{
+  outline-color: darkblue;
+}
+
+.SignInPage form {
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  padding: 10px;
+}
+
+.SignInPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.SignInPage form button {
+  background-color: var(--button-bg-color);
+}
+
+#amazon_kindle_logo{
+  height: 32px;
+  padding-bottom: 10px;
+}
