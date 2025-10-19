@@ -1,0 +1,67 @@
+.BookDetailPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.BookDetailPage #book-img{
+  width: 300px;
+  height: 400px;
+  padding-top: 10px;
+}
+
+.BookDetailPage .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.BookDetailPage .content #summary {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  font-size: medium;
+  overflow-y: auto;
+}
+
+.BookDetailPage .content #renderBook{
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  font-size: medium;
+}
+
+.BookDetailPage .content .buttons-container {
+  display: flex;
+  padding-top: 10px;
+}
+
+.BookDetailPage .content #summary-btn{
+  background-color: var(--button-bg-color);
+}
+
+.BookDetailPage .content #start-reading-btn{
+  background-color: aquamarine;
+}
+
+.BookDetailPage .close-btn {
+  background-color: red;
+  color: white;
+}
+
+.BookDetailPage__pagination {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.BookDetailPage__pagination button {
+  background-color: skyblue;
+  color: white;
+}

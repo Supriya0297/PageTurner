@@ -1,5 +1,7 @@
 import Book from '../models/Book.js'
 import User from '../models/User.js';
+import {generateSummary} from '../utils/aiUtils.js';
+import {extractTextFromPdf} from '../utils/pdfUtils.js'
 
 export async function getAllBooks(req,res) {
   // filter based on user - req.userId
@@ -42,3 +44,21 @@ export async function addBook(req,res) {
             details:savedBook});
 }
 
+export async function getBookSummary(req,res){
+  const bookId = req.params.id;
+  console.log(bookId);
+  const book = await Book.findOne({"_id": req.params.id});
+  if (book.summary === ""){
+    // extract text from books - pdfs 
+    const text = await extractTextFromPdf(book.pdfUrl);
+    
+    // invoke AI model to generate summary and store the summary in mongodb
+    book.summary = await generateSummary(text);
+    
+    // persistence
+    const savedBook = await book.save(); 
+  } 
+   // return a json containing book id and summary
+  return res.status(200)
+            .send({"id": book.id, "summary": book.summary})
+};

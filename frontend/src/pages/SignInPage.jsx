@@ -37,7 +37,7 @@ function SignInPage() {
       return;
     };
     // make backend call signin api
-    axios.post('http://localhost:8000/api/v1/auth/signin',{"email": email, "password": password})
+    axios.post('http://localhost:8001/api/v1/auth/signin',{"email": email, "password": password})
          .then( (res) => 
           {
             console.log("received response from signin call",res);
@@ -49,7 +49,9 @@ function SignInPage() {
               return;
             }
             const token = data.details?.token;
+            const userId = data.details?.userId;
             localStorage.setItem('token',token);
+            localStorage.setItem('userId',userId);
             setMessageDetails({status: "success",
                          message: "User SignIn is successful, redirecting to books page..."})
       // navigate to books in

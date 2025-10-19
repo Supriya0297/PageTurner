@@ -66,7 +66,7 @@ function SignUpPage() {
       return;
     };
     // make backend call signup api
-    axios.post('http://localhost:8000/api/v1/auth/signup',{
+    axios.post('http://localhost:8001/api/v1/auth/signup',{
     "name": username,
     "email": email,
     "password": password

@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className='Header'>
       <header>
-        <img src="https://m.media-amazon.com/images/G/01/kfw/landing/img_logo._CB611756372_.png" alt="Amazon Kindle" />
+        <img id= "kindle_logo" src="https://m.media-amazon.com/images/G/01/kfw/landing/img_logo._CB611756372_.png" alt="Amazon Kindle" />
         <h2>Take your stories wherever you go</h2>
         <div className='buttons-container'>
           <button id="Header__signUp" onClick={() => navigate('/signup')}>

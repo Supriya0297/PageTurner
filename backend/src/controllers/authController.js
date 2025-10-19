@@ -53,5 +53,13 @@ export async function signIn(req,res){
   const token = await generateToken(existingUser.id);
   return res.status(200)
             .json({message:"user signed successfully"
-                  , details: {token}});
+                  , details: {token: token,
+                              userId:existingUser.id}});
 } 
+
+export async function signOut(req,res){
+  
+  return res.status(200)
+            .json({message:"user signed out successfully"
+                  , details: "we expect the frontend to clear the token"});
+}

@@ -1,16 +1,17 @@
 import React from 'react';
-import SignInPage from './SignInPage';
+import { Navigate } from 'react-router-dom';
 
 function ProtectedRoute(props) {
   const token = localStorage.getItem('token') || null;
-  let isLoggedIn = token !== null;
-  const component = props.component;
-  console.log(component);
-  // TODO: check expiry of token
-  if (isLoggedIn){
-    return ({component})
+  //console.log(props);
+  const component = props.children;
+  //console.log(component);
+  // TODO: check whether the token is valid or not
+  if (token !== null){
+    return component;
   }else{
-  return (<SignInPage />)
+    return <Navigate to="/signin" />;
   }
+
 }
 export default ProtectedRoute

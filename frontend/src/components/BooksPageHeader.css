@@ -1,0 +1,19 @@
+.BooksPageHeader {
+  display: flex;
+  height: 40px;
+  padding: 5px;
+  background-color: aquamarine;
+  justify-content: space-between;
+}
+.BooksPageHeaderSearch {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+}
+.BooksPageHeaderOpts {
+  display: flex;
+  gap: 8px;
+  justify-content: space-evenly;
+
+}

@@ -1,0 +1,20 @@
+*{
+  font-family: system-ui, Avenir, Helvetica;
+  margin: 0px;
+  padding: 0px; 
+}
+  
+body {
+  place-items: center;
+  min-width: 320px;
+  height: 100vh;
+  --button-bg-color: #f8bd19;
+  
+}
+body::-webkit-scrollbar {
+        display: none;
+}
+
+button {
+  padding: 8px;
+}

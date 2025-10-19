@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
 }
-.Header header img{
+.Header header #kindle_logo{
   height: 39px;
   width: 209px;
   margin: 40px 5px 20px 5px;
@@ -22,10 +22,12 @@
   background-color: rgb(246, 220, 164);
   display: flex;
   height: fit-content;
+  gap : 5px;
+  align-items: center;
 }
 #Header__signIn img {
-  height: 32px;
-  width: 32px;
+  height: 20px;
+  width: 20px;
 }
 
 
@@ -40,4 +42,5 @@
 
 .buttons-container {
   display: flex;
+  gap: 8px;
 }

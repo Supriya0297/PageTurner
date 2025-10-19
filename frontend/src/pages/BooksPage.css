@@ -1,0 +1,22 @@
+.BooksPage{
+  height: 100vh;
+  background-color: azure;
+  margin: 0px;
+}
+.Book .book_img {
+  height: 200px;
+  width:150px;
+}
+.BooksPageMainContainer {
+  display: flex;
+  height: 100%;
+}
+
+.BooksPageMain{
+  display: flex;
+  flex: 0.8;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  height: 100%;
+}
